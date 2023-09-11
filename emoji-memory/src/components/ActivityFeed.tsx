@@ -1,6 +1,6 @@
 import Logo from "/src/assets/logo.png";
 
-function ActivityFeed() {
+export function ActivityFeed() {
   return (
     <div className="flex flex-col">
       <img src={Logo} className="max-w-full w-auto" />
@@ -9,5 +9,3 @@ function ActivityFeed() {
     </div>
   );
 }
-
-export default ActivityFeed;
