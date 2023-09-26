@@ -1,11 +1,12 @@
-import Logo from "/src/assets/logo.png";
-
-export function ActivityFeed() {
+import Repeat from '../assets/repeat.png';
+interface ActivityFeedProps {
+  className?: string;
+}
+export function ActivityFeed(props: ActivityFeedProps) {
   return (
-    <div className="flex flex-col">
-      <img src={Logo} className="max-w-full w-auto" />
+    <div className={`${props.className} font-bold text-2xl`}>
       <p>moves: 13</p>
-      <button>try again</button>
+      <button className="flex flex-row flex-middle items-center gap-2 bg-blue-900 px-4 py-1 rounded-xl mt-4 mx-auto">Try Again <img src={Repeat} className='w-6'/></button>
     </div>
   );
 }
