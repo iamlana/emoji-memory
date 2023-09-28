@@ -1,17 +1,19 @@
+import classNames from "classnames";
 import BackPattern from "/src/assets/back-pattern.png";
 
 interface TileProps {
   src: string;
   onClick?: () => void;
   isOpened?: boolean;
+  flip?: () => void;
 }
 export function Tile(props: TileProps) {
   return (
-    <img
-      src={props.isOpened ? props.src : BackPattern}
-      alt="Flip Card"
-      onClick={props.onClick}
-      className="sm:w-20 sm:h-20 w-14 h-14 max-w-fit hover:drop-shadow hover:scale-105"
-      draggable="false"></img>
+    <div
+      className={classNames("tile w-20 h-20", props.isOpened && "tile-opened")}
+      onClick={props.onClick}>
+      <img draggable={false} src={BackPattern} />
+      <img draggable={false} src={props.src} />
+    </div>
   );
 }

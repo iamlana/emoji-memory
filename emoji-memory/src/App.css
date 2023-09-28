@@ -3,8 +3,36 @@
   margin: 0 auto;
   text-align: center;
 }
+
 body {
   background-color: #5175d0;
   color: #fff;
   padding: 20px 15px;
+}
+
+
+.tile {
+  perspective: 1000px;
+  position: relative;
+}
+
+.tile img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease-in-out, opacity 0.3s step-end;
+  transform: rotateY(180deg);
+}
+
+.tile img:last-child {
+  opacity: 0;
+}
+
+.tile-opened img:last-child {
+  opacity: 1;
+}
+
+.tile-opened img {
+  transform: rotateY(0deg);
 }
