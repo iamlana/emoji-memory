@@ -19,7 +19,8 @@ export function ActivityFeed(props: ActivityFeedProps) {
         onClick={props.onReset}
         className={`flex flex-row flex-middle items-center gap-2 bg-blue-900 px-4 py-1 rounded-xl mt-4 mx-auto ${
           !props.isVictory && "invisible"
-        }`}>
+        }`}
+      >
         Try Again <img src={Repeat} className="w-6" />
       </button>
       {props.isVictory && <Confetti />}

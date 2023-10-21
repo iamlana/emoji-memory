@@ -15,7 +15,7 @@ import Unicorn from "/src/assets/emojis/unicorn.png";
 
 export function App() {
   const [tileStates, setTileStates] = useState(() =>
-    new Array<boolean>(16).fill(false)
+    new Array<boolean>(16).fill(false),
   );
 
   const [board] = useState(initBoard);
@@ -38,8 +38,8 @@ export function App() {
         setTimeout(() => {
           setTileStates(
             tileStates.map((tile, i) =>
-              i === index || i == recentlyOpened[0] ? false : tile
-            )
+              i === index || i == recentlyOpened[0] ? false : tile,
+            ),
           );
           setInputDisabled(false);
         }, 1000);
@@ -63,14 +63,16 @@ export function App() {
           <TilesGrid
             openTile={inputDisabled ? undefined : openTile}
             board={board}
-            tileStates={tileStates}></TilesGrid>
+            tileStates={tileStates}
+          ></TilesGrid>
         </div>
         <Logotype className="md:col-start-4 col-start-1 row-start-1 col-end-7 max-w-xs" />
         <ActivityFeed
           isVictory={isVictory(tileStates)}
           movesCount={movesCounter}
           className="md:col-start-4 col-start-1 col-end-7"
-          onReset={resetBoard}></ActivityFeed>
+          onReset={resetBoard}
+        ></ActivityFeed>
       </div>
       <DeveloperInfo />
     </div>

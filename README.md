@@ -11,6 +11,7 @@ Emoji Memory is a fun and interactive memory card game built with React. Test yo
 - ⚡ Fast & Efficient: Powered by Vite for an optimal development and production experience.
 
 ## Setup and Installation
+
 ### Prerequisites
 
     Node.js (v18+ recommended)
