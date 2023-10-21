@@ -9,7 +9,7 @@ interface ActivityFeedProps {
 }
 export function ActivityFeed(props: ActivityFeedProps) {
   return (
-    <div className={`${props.className} font-bold text-2xl`}>
+    <div className={`${props.className} font-bold text-xl md:text-2xl`}>
       <p>
         {props.isVictory
           ? `You won in ${props.movesCount} moves!`

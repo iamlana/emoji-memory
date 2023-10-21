@@ -11,7 +11,7 @@ export function Tile(props: TileProps) {
   return (
     <div
       className={classNames(
-        "perspective-1000 relative w-20 h-20",
+        "perspective-1000 relative w-16 h-16 md:w-20 md:h-20",
         props.isOpened && "tile-opened",
       )}
       onClick={props.onClick}

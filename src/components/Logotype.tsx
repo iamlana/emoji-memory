@@ -1,7 +1,4 @@
 import Logo from "/src/assets/logo.png";
-// interface LogotypeProps {
-//   className?: string;
-// }
 
 export function Logotype() {
   return (

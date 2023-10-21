@@ -53,8 +53,8 @@ export function App() {
   }
 
   return (
-    <div className="flex flex-col mx-auto justify-between h-[calc(100vh_-_40px)] max-w-screen-xl">
-      <div className="grid grid-cols-6 gap-4 mx-auto md:mt-20">
+    <div className="flex flex-col mx-auto justify-around h-full">
+      <div className="grid grid-cols-6 gap-1 md:gap-4 mx-auto md:mt-20">
         <div className="col-start-1 md:col-end-4 md:row-start-1 col-end-7 row-start-2 row-end-3">
           <TileGrid
             openTile={inputDisabled ? undefined : openTile}
