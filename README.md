@@ -2,6 +2,8 @@
 
 ## Play it yourself now: https://emoji-memory-iamlana.netlify.app/
 
+![Screenshot](./public/screenshot/mockup.png)
+
 Emoji Memory is a fun and interactive memory card game built with React. Test your memory by matching pairs of emojis! Once you've successfully matched all the cards: get ready for a delightful confetti surprise 🎉.
 
 ## Features:
