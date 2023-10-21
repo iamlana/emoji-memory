@@ -3,21 +3,14 @@ import { ActivityFeed } from "./components/ActivityFeed";
 import { DeveloperInfo } from "./components/DeveloperInfo";
 import { Logotype } from "./components/Logotype";
 import { TileGrid } from "./components/TileGrid";
-import Bear from "/src/assets/emojis/bear.png";
-import Dog from "/src/assets/emojis/dog.png";
-import Fox from "/src/assets/emojis/fox.png";
-import Frog from "/src/assets/emojis/frog.png";
-import Kitty from "/src/assets/emojis/kitty.png";
-import Mouse from "/src/assets/emojis/mouse.png";
-import Pig from "/src/assets/emojis/pig.png";
-import Unicorn from "/src/assets/emojis/unicorn.png";
+import { TILES } from "./tiles";
 
 export function App() {
   const [tileStates, setTileStates] = useState(() =>
     new Array<boolean>(16).fill(false),
   );
 
-  const [board] = useState(initBoard);
+  const [board, setBoard] = useState(initBoard);
   const [movesCounter, setMovesCounter] = useState(0);
   const [inputDisabled, setInputDisabled] = useState(false);
 
@@ -51,8 +44,12 @@ export function App() {
   function resetBoard() {
     setTileStates(new Array<boolean>(16).fill(false));
     setRecentlyOpened([]);
-    shuffle(board);
     setMovesCounter(0);
+    setInputDisabled(true);
+    setTimeout(() => {
+      setBoard(initBoard);
+      setInputDisabled(false);
+    }, 600);
   }
 
   return (
@@ -79,8 +76,7 @@ export function App() {
 }
 
 function initBoard() {
-  const tiles = [Bear, Dog, Fox, Frog, Kitty, Mouse, Pig, Unicorn];
-  return shuffle([...tiles, ...tiles]);
+  return shuffle([...TILES, ...TILES]);
 }
 
 function shuffle<T>(array: T[]): T[] {
