@@ -1,27 +1,44 @@
-# React + TypeScript + Vite
+# Emoji Memory 🧠🤯✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Play it yourself now: https://emoji-memory-iamlana.netlify.app/
 
-Currently, two official plugins are available:
+Emoji Memory is a fun and interactive memory card game built with React. Test your memory by matching pairs of emojis! Once you've successfully matched all the cards: get ready for a delightful confetti surprise 🎉.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
 
-## Expanding the ESLint configuration
+- 🎴 Engaging Gameplay: Flip cards to reveal emojis and match pairs.
+- 🌈 Sleek Design: Styled with TailwindCSS for a modern and responsive layout.
+- ⚡ Fast & Efficient: Powered by Vite for an optimal development and production experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup and Installation
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+    Node.js (v18+ recommended)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### Steps:
+
+1. Clone the repository:
+
+```
+git clone https://github.com/iamlana/emoji-memory.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+
+```
+cd emoji-memory
+```
+
+3. Install dependencies:
+
+```
+npm install
+```
+
+4. Run the development server:
+
+```
+npm run dev
+```
+
+5. Open your browser and go to http://localhost:5173/. You should see the game running!
