@@ -6,7 +6,7 @@ interface TilesGridProps {
   board: string[];
 }
 
-export function TilesGrid(props: TilesGridProps) {
+export function TileGrid(props: TilesGridProps) {
   return (
     <div className="grid grid-rows-4 grid-cols-4 gap-1 max-w-fit mx-auto">
       {props.board.map((tile: string, index: number) => (

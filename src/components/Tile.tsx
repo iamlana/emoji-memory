@@ -10,11 +10,28 @@ interface TileProps {
 export function Tile(props: TileProps) {
   return (
     <div
-      className={classNames("tile w-20 h-20", props.isOpened && "tile-opened")}
+      className={classNames(
+        "perspective-1000 relative w-20 h-20",
+        props.isOpened && "tile-opened",
+      )}
       onClick={props.onClick}
     >
-      <img draggable={false} src={BackPattern} />
-      <img draggable={false} src={props.src} />
+      <img
+        className={classNames(
+          "absolute tile-transition",
+          props.isOpened ? "rotate-y-0" : "rotate-y-180",
+        )}
+        draggable={false}
+        src={BackPattern}
+      />
+      <img
+        className={classNames(
+          "absolute tile-transition",
+          props.isOpened ? "rotate-y-0 opacity-100" : "rotate-y-180 opacity-0",
+        )}
+        draggable={false}
+        src={props.src}
+      />
     </div>
   );
 }

@@ -1,9 +1,8 @@
 import { useState } from "react";
-import "./App.css";
 import { ActivityFeed } from "./components/ActivityFeed";
 import { DeveloperInfo } from "./components/DeveloperInfo";
-import { Logotype } from "./components/Logo";
-import { TilesGrid } from "./components/TilesGrid";
+import { Logotype } from "./components/Logotype";
+import { TileGrid } from "./components/TileGrid";
 import Bear from "/src/assets/emojis/bear.png";
 import Dog from "/src/assets/emojis/dog.png";
 import Fox from "/src/assets/emojis/fox.png";
@@ -60,13 +59,13 @@ export function App() {
     <div className="flex flex-col mx-auto justify-between h-[calc(100vh_-_40px)] max-w-screen-xl">
       <div className="grid grid-cols-6 gap-4 mx-auto md:mt-20">
         <div className="col-start-1 md:col-end-4 md:row-start-1 col-end-7 row-start-2 row-end-3">
-          <TilesGrid
+          <TileGrid
             openTile={inputDisabled ? undefined : openTile}
             board={board}
             tileStates={tileStates}
-          ></TilesGrid>
+          ></TileGrid>
         </div>
-        <Logotype className="md:col-start-4 col-start-1 row-start-1 col-end-7 max-w-xs" />
+        <Logotype />
         <ActivityFeed
           isVictory={isVictory(tileStates)}
           movesCount={movesCounter}

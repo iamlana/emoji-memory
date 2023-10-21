@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.tile-transition {
+  transition:
+    transform 0.6s ease-in-out,
+    opacity 0.3s step-end;
+}
